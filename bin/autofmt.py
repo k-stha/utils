@@ -22,7 +22,7 @@ def get_args(argv: list[str]) -> argparse.Namespace:
         type=str,
         action="extend",
         nargs="+",
-        help="Input path(s) to format (could be either files or directories)",
+        help="Input path(s) to format (could be either files and/or directories)",
     )
 
     return parser.parse_intermixed_args(argv)
