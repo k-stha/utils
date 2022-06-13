@@ -74,7 +74,7 @@ def return_black_args(paths: list[str]) -> list[str]:
 
 
 def run_formatters(paths: list[str]) -> None:
-    """"""
+    """Check paths and run formatters on them."""
     check_path(paths)
 
     run(return_isort_args(paths), check=True)
