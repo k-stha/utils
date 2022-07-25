@@ -30,7 +30,7 @@ def get_args(argv: list[str]) -> argparse.Namespace:
 
 def check_path(path_list: list[str]) -> None:
     """Check if all the given paths are files and/or directories."""
-    error_count = 0
+    error_count: int = 0
 
     for path in path_list:
         if not (isfile(path) or isdir(path)):
@@ -43,9 +43,9 @@ def check_path(path_list: list[str]) -> None:
 
 def return_isort_args(paths: list[str]) -> list[str]:
     """Return isort arguments as list."""
-    isort_exec = "isort"
+    isort_exec: str = "isort"
 
-    isort_args = [
+    isort_args: list[str] = [
         isort_exec,
         "-n",
         "-l",
@@ -66,9 +66,9 @@ def return_isort_args(paths: list[str]) -> list[str]:
 
 def return_black_args(paths: list[str]) -> list[str]:
     """Return black arguments as list."""
-    black_exec = "black"
+    black_exec: str = "black"
 
-    black_args = [black_exec, "-q"] + paths
+    black_args: list[str] = [black_exec, "-q"] + paths
 
     return black_args
 
