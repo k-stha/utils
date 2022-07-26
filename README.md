@@ -5,7 +5,7 @@ Various useful utilities
 ## Table of Contents
 
 - [Description](#description)
-- [Contributing Guidelines](#contributing-guidelines)
+- [Contribution Guidelines](#contribution-guidelines)
 
 ## Description
 
@@ -16,6 +16,6 @@ This contains:
 - autofmt.py - Uses isort and black to automatically format given Python 3
                scripts.
 
-## Contributing Guidelines
+## Contribution Guidelines
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
