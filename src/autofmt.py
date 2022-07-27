@@ -82,7 +82,7 @@ def run_formatters(paths: list[str]) -> None:
 
 
 def main(argv: list[str]) -> None:
-    """Function to be called."""
+    """Start code execution."""
     args: argparse.Namespace = get_args(argv)
 
     if args.input_path:
