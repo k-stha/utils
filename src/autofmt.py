@@ -21,7 +21,7 @@ def get_args(argv: list[str]) -> argparse.Namespace:
         allow_abbrev=False,
     )
 
-    optional: argparse._ArgumentGroup = parser.add_argument_group("optional arguments")
+    optional = parser.add_argument_group("optional arguments")
 
     parser.add_argument(
         "input_path",
