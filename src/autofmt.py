@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Automatically format Python 3 scripts."""
+"""Automatically format Python scripts."""
 
 import argparse
 import sys
@@ -15,7 +15,13 @@ def error(message: str) -> None:
 
 def get_args(argv: list[str]) -> argparse.Namespace:
     """Parse arguments and return them."""
-    parser: argparse.ArgumentParser = argparse.ArgumentParser()
+    parser: argparse.ArgumentParser = argparse.ArgumentParser(
+        description="Automatically format Python scripts",
+        add_help=False,
+        allow_abbrev=False,
+    )
+
+    optional: argparse._ArgumentGroup = parser.add_argument_group("optional arguments")
 
     parser.add_argument(
         "input_path",
@@ -23,6 +29,14 @@ def get_args(argv: list[str]) -> argparse.Namespace:
         action="extend",
         nargs="+",
         help="Input path(s) to format (could be either files and/or directories)",
+    )
+
+    optional.add_argument(
+        "-h",
+        "--help",
+        action="help",
+        default=argparse.SUPPRESS,
+        help="Show this help message and exit",
     )
 
     return parser.parse_intermixed_args(argv)
